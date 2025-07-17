@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us - Aramis Tech Solutions</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0a0a0a;
+      color: #f0f0f0;
+      line-height: 1.6;
+      overflow-x: hidden;
+      animation: fadeInBody 1.5s ease forwards;
+      opacity: 0;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #00eaff;
+      text-shadow: 0 0 8px #00eaff;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 25px 60px; background: #111;
+      position: fixed; width: 100%; top: 0; z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 255, 255, 0.1);
+      animation: slideDown 1s ease forwards;
+    }
+    .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #00eaff;
+      text-shadow: 0 0 10px #00eaff;
+      animation: glowPulse 3s ease-in-out infinite;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+    .nav-links a {
+      font-weight: 500;
+      color: #fff;
+      padding: 6px 0;
+      position: relative;
+    }
+    .nav-links a:hover,
+    .nav-links .active {
+      color: #00eaff;
+      text-shadow: 0 0 8px #00eaff;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      max-width: 700px;
+      margin: 120px auto 60px;
+      padding: 20px;
+      background: #111;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 234, 255, 0.15);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeSlideUp 1.2s ease forwards;
+      animation-delay: 0.5s;
+    }
+    .contact-section h1 {
+      color: #00eaff;
+      margin-bottom: 25px;
+      font-size: 2.5rem;
+      text-shadow: 0 0 15px #00eaff;
+      animation: glowPulse 3s ease-in-out infinite;
+      cursor: default;
+      text-align: center;
+    }
+    .contact-info {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-bottom: 25px;
+      line-height: 1.7;
+    }
+    .contact-info strong {
+      color: #00eaff;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .contact-form label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #00eaff;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px 15px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      font-family: inherit;
+      resize: vertical;
+      background: #222;
+      color: #eee;
+      box-shadow: inset 0 0 8px rgba(0, 234, 255, 0.3);
+      transition: box-shadow 0.3s ease;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      box-shadow: 0 0 15px #00eaff;
+      background: #111;
+    }
+    .contact-form button {
+      background: #00eaff;
+      color: #000;
+      font-weight: 700;
+      padding: 15px;
+      border: none;
+      border-radius: 40px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 0 20px #00eaff;
+      transition: background 0.4s ease, box-shadow 0.4s ease;
+      text-transform: uppercase;
+    }
+    .contact-form button:hover {
+      background: #00b8cc;
+      box-shadow: 0 0 35px #00b8cc;
+    }
+
+    /* Footer */
+    .footer {
+      background: #000;
+      padding: 30px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      border-top: 1px solid #222;
+      margin-top: 60px;
+      user-select: none;
+    }
+
+    /* Animations */
+    @keyframes fadeInBody {
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes slideDown {
+      from {
+        transform: translateY(-40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    @keyframes fadeSlideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes glowPulse {
+      0%, 100% {
+        text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
+      }
+      50% {
+        text-shadow: 0 0 20px #00eaff, 0 0 40px #00eaff;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">Aramis</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="solutions.html">Solutions</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h1>Contact Us</h1>
+    <div class="contact-info">
+      <p><strong>Business Hours:</strong> Sun–Thu: 8 AM – 5:30 PM, Fri–Sat: Closed</p>
+      <p><strong>Address:</strong><br />
+        P.O. Box 54200, Al Seef, Bahrain<br />
+        Building 872, 5th Floor, Offices 53–54, Road 3616
+      </p>
+      <p><strong>Phone:</strong> +973 1725 9007 • +973 1725 9008<br />
+         <strong>Email:</strong> info@aramissolutions.com
+      </p>
+    </div>
+
+    <form class="contact-form" action="#" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your email address" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+  <!-- Google Maps Embed -->
+<section class="map-section">
+  <h2>Find Us on the Map</h2>
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.040038346457!2d50.5309311!3d26.2388609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49a54359c47f09%3A0x38e7c5a1dfce410a!2sAramis%20Enterprise%20Solutions!5e0!3m2!1sen!2sbh!4v1720629800000!5m2!1sen!2sbh"
+      width="100%" height="400" style="border:0;" allowfullscreen=""
+      loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Aramis Tech Solutions</p>
+  </footer>
+
+</body>
+</html>
